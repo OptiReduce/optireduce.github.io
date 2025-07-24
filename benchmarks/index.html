@@ -624,6 +624,24 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#building-torchvision-from-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Torchvision from source
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-training-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the training script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#option-1-run-optireduce-only-default" class="md-nav__link">
     <span class="md-ellipsis">
       Option 1: Run OptiReduce Only (Default)
@@ -925,6 +943,13 @@ Options:
 <p>The size parameters (4 and 16) are based on our test environment. You may need to adjust these values in your environment to achieve similar p99/p50 latency ratios. Monitor your network conditions and adjust accordingly.</p>
 </div>
 <h2 id="running-training">Running Training</h2>
+<h3 id="building-torchvision-from-source">Building Torchvision from source</h3>
+<p>We build a custom PyTorch and hence need to build Torchvision from source to work with it.
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/pytorch/vision.git
+<span class="nb">cd</span><span class="w"> </span>vision
+python<span class="w"> </span>setup.py<span class="w"> </span>install
+</code></pre></div></p>
+<h3 id="using-the-training-script">Using the training script</h3>
 <ol>
 <li>Create a DPDK configuration file (<code>dpdk.cfg</code>) mapping IP addresses to MAC addresses:</li>
 </ol>
